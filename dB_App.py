@@ -2,12 +2,12 @@
 # dB Meter software for Wensn
 # by Mikael Bendiksen (c) 2015
 
-import Tkinter
+import tkinter
 import sys
 import usb.core
 import sched, time
 from threading import Timer
-from Tkinter import *
+from tkinter import *
 
 dev = usb.core.find(idVendor=0x16c0, idProduct=0x5dc)
 root = Tk()
@@ -15,7 +15,7 @@ dB = 0
 labelText = StringVar()
 labelText.set("0")
 
-print "Starting dB Meter by Mikael Bendiksen"
+print("Starting dB Meter by Mikael Bendiksen")
 
 def update():
   ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)

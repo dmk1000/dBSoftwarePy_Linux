@@ -20,8 +20,8 @@ print("Starting dB Meter by Mikael Bendiksen")
 def update():
   ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
   global dB
-  dB = (ret[0] + ((ret[1] & 3) * 256)) * 0.1 + 30
-  #print dB
+  dB = (ret[0] + ((ret[1] & 3) * 256)) / 10 + 30
+  #print(dB)
   labelText.set(dB);
   root.update_idletasks() 
   t = Timer(1.0, update)

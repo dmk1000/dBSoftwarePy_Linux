@@ -9,4 +9,7 @@ The program is written in Python and was testet and working under Ubuntu Desktop
 - Python PIP
 - Wensn WS1361c dB USB unit.
 
+Debian/Ubuntu/Mint
 
+- sudo apt install python3-tk python3-usb
+- sudo python dB_App.py
